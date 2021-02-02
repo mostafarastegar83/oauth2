@@ -1,0 +1,1 @@
+keytool -genkey -alias oauth2-test -keyalg RSA -keystore oauth2.jsk  -keysize 2048
