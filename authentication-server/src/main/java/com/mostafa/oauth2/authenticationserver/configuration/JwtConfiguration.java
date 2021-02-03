@@ -1,5 +1,9 @@
-package com.mostafa.oauth2.authenticationserver.configurations;
+package com.mostafa.oauth2.authenticationserver.configuration;
 
+import com.nimbusds.jose.JWSAlgorithm;
+import com.nimbusds.jose.jwk.JWKSet;
+import com.nimbusds.jose.jwk.KeyUse;
+import com.nimbusds.jose.jwk.RSAKey;
 import java.io.IOException;
 import java.io.InputStream;
 import java.security.Key;
@@ -77,6 +81,14 @@ public class JwtConfiguration {
     }
 
     throw new IllegalArgumentException("Unable to load RSA public key");
+  }
+
+  @Bean
+  public JWKSet jwkSet(RSAPublicKey rsaPublicKey) {
+    RSAKey.Builder builder = new RSAKey.Builder(rsaPublicKey)
+        .keyUse(KeyUse.SIGNATURE)
+        .algorithm(JWSAlgorithm.RS256);
+    return new JWKSet(builder.build());
   }
 
   @Bean

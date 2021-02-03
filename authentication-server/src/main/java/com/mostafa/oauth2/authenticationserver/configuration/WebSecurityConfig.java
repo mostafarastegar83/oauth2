@@ -1,4 +1,4 @@
-package com.mostafa.oauth2.authenticationserver.configurations;
+package com.mostafa.oauth2.authenticationserver.configuration;
 
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -30,7 +30,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             configurer
                 .antMatchers(
                     "/error",
-                    "/login"
+                    "/login", "/jwks.json"
                 )
                 .permitAll()
                 .anyRequest()

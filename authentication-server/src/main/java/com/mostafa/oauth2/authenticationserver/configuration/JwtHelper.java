@@ -1,4 +1,4 @@
-package com.mostafa.oauth2.authenticationserver.configurations;
+package com.mostafa.oauth2.authenticationserver.configuration;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTCreator;

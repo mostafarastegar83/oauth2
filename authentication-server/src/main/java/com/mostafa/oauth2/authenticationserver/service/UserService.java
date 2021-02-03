@@ -1,6 +1,6 @@
 package com.mostafa.oauth2.authenticationserver.service;
 
-import com.mostafa.oauth2.authenticationserver.configurations.JwtHelper;
+import com.mostafa.oauth2.authenticationserver.configuration.JwtHelper;
 import com.mostafa.oauth2.domain.LoginResult;
 import com.mostafa.oauth2.domain.User;
 import java.util.HashMap;

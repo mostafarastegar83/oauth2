@@ -1,4 +1,4 @@
-package com.mostafa.oauth2.authenticationserver.configurations;
+package com.mostafa.oauth2.authenticationserver.configuration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Bean;
