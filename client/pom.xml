@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.mostafa.oauth2</groupId>
-    <artifactId>authentication-client</artifactId>
+    <artifactId>client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>authentication-client</name>
     <description>Authentication Client</description>

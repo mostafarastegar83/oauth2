@@ -22,8 +22,11 @@ public class JWTSecurityConfig extends WebSecurityConfigurerAdapter {
             .collect(Collectors.toList()));
     jwtAuthenticationConverter.setPrincipalClaimName("username");
     http
+        .cors()
+        .and()
+        .csrf().disable()
         .authorizeRequests(authz -> authz
-            .antMatchers(HttpMethod.GET, "/messages/**").hasAuthority("USER")
+            .antMatchers(HttpMethod.GET, "/messages/**").hasAuthority("ROLE_USER")
             .anyRequest().authenticated())
         .oauth2ResourceServer()
         .jwt()

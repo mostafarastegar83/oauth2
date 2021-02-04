@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 public class MessageService {
   private final MessageRepository messageRepository;
 
-  @PreAuthorize("hasAuthority('USER')")
+  @PreAuthorize("hasRole('USER')")
   public List<Message> getCurrentUserMessages(Principal principal) {
     return messageRepository.getMessagesByUsername(principal.getName());
   }
